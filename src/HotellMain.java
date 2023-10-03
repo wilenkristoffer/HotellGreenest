@@ -12,32 +12,29 @@ public class HotellMain {
             String växt = bufferedReader.readLine().toLowerCase().trim();
 
             //Instanser av objekt av varje växt
-            Växt Igge = new Kaktus();
-            Växt MeatLoaf = new Köttätande();
-            Växt Olof = new Palm();
-            Växt Laura = new Palm();
+            Kaktus Igge = new Kaktus();
+            Köttätande MeatLoaf = new Köttätande();
+            Palm Olof = new Palm();
+            Palm Laura = new Palm();
 
             //If-satser som läser av Stringen "växt" och letar efter någon av de fyra växterna som finns i hotellet
             //om namnet matchar så sätts korrekt data och skickas vidare till respektive växters metod för uträkning och sedan utskrift.
-            if (växt.contains("igge")){
+            if (växt.contains("igge")) {
                 Igge.setNamn(Igge.iggeNamn);
                 Igge.setLängdMeter(Igge.iggeLängd);
                 Igge.setMängdVätska(Igge.iggeMängd);
                 Igge.waterPlant();
-            }
-            else if (växt.contains("laura")){
+            } else if (växt.contains("laura")) {
                 Laura.setNamn(Laura.lauraNamn);
                 Laura.setLängdMeter(Laura.lauraLängd);
                 Laura.setMängdVätska(Laura.lauraMängd);
                 Laura.waterPlant();
-            }
-            else if (växt.contains("meatloaf")) {
+            } else if (växt.contains("meatloaf")) {
                 MeatLoaf.setNamn(MeatLoaf.meatloafNamn);
                 MeatLoaf.setLängdMeter(MeatLoaf.meatloafLängd);
                 MeatLoaf.setMängdVätska(MeatLoaf.meatloafMängd);
                 MeatLoaf.waterPlant();
-            }
-            else if (växt.contains("olof")) {
+            } else if (växt.contains("olof")) {
                 Olof.setNamn(Olof.olofNamn);
                 Olof.setLängdMeter(Olof.olofLängd);
                 Olof.setMängdVätska(Olof.olofMängd);

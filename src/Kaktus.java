@@ -1,8 +1,11 @@
-class Kaktus extends Växt implements Waterable{
+class Kaktus extends Växt implements Waterable {
     //Ej publika klasser så de inte kan användas utanför "paketet".(Inkapsling)
+    protected String iggeNamn = "Igge";
+    protected double iggeLängd = 0.2;
+    protected double iggeMängd = 0.02;
 
-    //Konstruktor för att sätta vilken typ av vatten som växten använder.(enums) i WaterType filen.
-    public Kaktus(){
+    //Konstruktor för att sätta vilken typ av vatten som växten använder.(enum) i WaterType filen.
+    public Kaktus() {
         setFöredragenVattentyp(WaterType.MINERALVATTEN);
     }
 
@@ -13,7 +16,7 @@ class Kaktus extends Växt implements Waterable{
     @Override
     public void waterPlant() {
         System.out.println(getNamn() + " kommer att få " + getMängdVätska() + " liter utav "
-                //Använder enums variablernas tillsatta "värden" för att få utskrift av rätt typ av vatten.
+                //Använder enum typens tillsatta "värden" för att få utskrift av rätt typ av vatten.
                 + getFöredragenVattentyp().vattenTyp + " per dag.");
     }
 }
