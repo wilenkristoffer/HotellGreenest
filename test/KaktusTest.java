@@ -1,15 +1,15 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class KaktusTest {
 
-    public Kaktus kaktus = new Kaktus();
-//Eftersom Igge är den enda kaktusen och bara använder sig utav förutbestämd data,
-// så kunde jag inte testa mer än att kolla ifall att jag har lagt in rätt mängd och längd för Igge.
+    public Kaktus kaktus = new Kaktus("igge", 0.2, 0.02);
+//Test för att kolla ifall att jag har lagt in rätt mängd och längd för Igge. Då Igge inte kräver någon uträkning.
     @Test
-    void isCalculationCorrect() {
-        assert(kaktus.iggeLängd == 0.2);
-        assert(kaktus.iggeMängd == 0.02);
+    void isInputCorrect() {
+        assert(kaktus.längd == 0.2);
+        assert(kaktus.mängd == 0.02);
+        assert(kaktus.längd != 0.1);
+        assert(kaktus.mängd != 0.01);
     }
 }

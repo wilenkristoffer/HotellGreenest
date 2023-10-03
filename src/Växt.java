@@ -11,7 +11,7 @@ abstract public class Växt {
     abstract void waterPlant();
 
     //Publika Getters & Setters för mängd/längd till metoderna som gör uträkningarna. Samt för utskrift av namnen.
-    //Detta är också en form av inkapsling, precis som variablerna över är deklarerade som protected.
+    //Detta är också en form av inkapsling.
     public double getLängdMeter() {
         return this.längdMeter;
     }

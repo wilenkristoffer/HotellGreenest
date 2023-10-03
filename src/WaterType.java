@@ -6,7 +6,6 @@ public enum WaterType {
 
     public final String vattenTyp;
 
-
     //Konstruktor som varje växt kallar på när vi sätter värdet på vilken typ av vatten vi använder för den växten.
     WaterType(String typ) {
         vattenTyp = typ;
