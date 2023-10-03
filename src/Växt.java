@@ -1,4 +1,5 @@
 abstract public class Växt {
+    //Gemensamma egenskaper är deklarerade här, en typ av polymorphism.
     protected double längdMeter;
     protected double mängdVätska;
     protected String namn;
@@ -6,12 +7,8 @@ abstract public class Växt {
     //föredragenVattentyp är en enum typ från WaterType.
     protected WaterType föredragenVattentyp;
 
-    //Abstract metod som används av varje växt.
-    //Polymorphism & inkapsling för att varje subklass måste använda denna metod.
-    abstract void waterPlant();
-
     //Publika Getters & Setters för mängd/längd till metoderna som gör uträkningarna. Samt för utskrift av namnen.
-    //Detta är också en form av inkapsling.
+    //Detta är också en form av inkapsling och polymorphism.
     public double getLängdMeter() {
         return this.längdMeter;
     }

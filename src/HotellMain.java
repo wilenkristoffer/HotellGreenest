@@ -40,7 +40,7 @@ public class HotellMain {
             }
             //Ifall användaren inte anget något, eller text som inte matchar växternas namn så får man detta felmeddelandet.
             else {
-                JOptionPane.showMessageDialog(null,"Denna växt finns inte på det här hotellet");
+                JOptionPane.showMessageDialog(null,"Denna växt finns inte på det här hotellet!");
             }
     }
 }
