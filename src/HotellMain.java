@@ -14,29 +14,21 @@ public class HotellMain {
             //If-satser som läser av Stringen "växt" och letar efter någon av de fyra växterna som finns i hotellet
             //om namnet matchar så sätts korrekt data och skickas vidare till respektive växters metod för uträkning och sedan utskrift.
             if (växt.contains(Igge.namn)) {
-                Igge.setNamn(Igge.namn);
-                Igge.setLängdMeter(Igge.längd);
-                Igge.setMängdVätska(Igge.mängd);
                 Igge.setFöredragenVattentyp(WaterType.MINERALVATTEN);
-                Igge.waterPlant();
+                Igge.waterPlantUträkning();
+                Igge.plantPrint();
             } else if (växt.contains(Laura.namn)) {
-                Laura.setNamn(Laura.namn);
-                Laura.setLängdMeter(Laura.längd);
-                Laura.setMängdVätska(Laura.mängd);
                 Laura.setFöredragenVattentyp(WaterType.KRANVATTEN);
-                Laura.waterPlant();
+                Laura.waterPlantUträkning();
+                Laura.plantPrint();
             } else if (växt.contains(MeatLoaf.namn)) {
-                MeatLoaf.setNamn(MeatLoaf.namn);
-                MeatLoaf.setLängdMeter(MeatLoaf.längd);
-                MeatLoaf.setMängdVätska(MeatLoaf.mängd);
                 MeatLoaf.setFöredragenVattentyp(WaterType.PROTEINDRYCK);
-                MeatLoaf.waterPlant();
+                MeatLoaf.waterPlantUträkning();
+                MeatLoaf.plantPrint();
             } else if (växt.contains(Olof.namn)) {
-                Olof.setNamn(Olof.namn);
-                Olof.setLängdMeter(Olof.längd);
-                Olof.setMängdVätska(Olof.mängd);
                 Olof.setFöredragenVattentyp(WaterType.KRANVATTEN);
-                Olof.waterPlant();
+                Olof.waterPlantUträkning();
+                Olof.plantPrint();
             }
             //Ifall användaren inte anget något, eller text som inte matchar växternas namn så får man detta felmeddelandet.
             else {

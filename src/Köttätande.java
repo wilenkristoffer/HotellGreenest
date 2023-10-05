@@ -5,9 +5,16 @@ class Köttätande extends Växt implements Waterable {
 
     //Köttätande växten har alltid en basnivå som är den samma, så den är inlagd som en konstant.
     protected final double BASNIVÅ = 0.1;
-    protected String namn;
     protected double längd;
     protected double mängd;
+
+    public double getLängd() {
+        return längd;
+    }
+
+    public double getMängd() {
+        return mängd;
+    }
 
     public Köttätande(String namn, double längd, double mängd){
         this.namn = namn;
@@ -20,9 +27,13 @@ class Köttätande extends Växt implements Waterable {
     waterPlant metoden för att göra uträkningen. Metoden använder Getters från superklassen Växt.
     */
     @Override
-    public void waterPlant() {
-        double hurMycketVätska = BASNIVÅ + (getMängdVätska() * getLängdMeter());
-       JOptionPane.showMessageDialog(null,getNamn() + " kommer att få " + hurMycketVätska
+    public double waterPlantUträkning() {
+        return BASNIVÅ + (getMängd() * getLängd());
+    }
+
+    @Override
+    public void plantPrint() {
+        JOptionPane.showMessageDialog(null,getNamn() + " kommer att få " + waterPlantUträkning()
                 //Använder enum typens tillsatta "värden" för att få utskrift av rätt typ av vatten.
                 + " liter utav " + getFöredragenVattentyp().vattenTyp + " per dag.");
     }
