@@ -6,9 +6,8 @@ class PalmTest {
 
 
 
-    //Testar waterPlant metoden i klassen Palm och kollar ifall man får korrekt resultat från
-    //både Laura och Olof's waterPlant uträkning.
-    //Laura's resultat ska vara 2.5 och Olof's resultat ska vara 0.5
+    //Testar waterPlantUträkning metoden i klassen Palm och kollar ifall man får korrekt resultat från
+    //både Laura och Olof's uträkning.
 
     @Test
     void isCalculationCorrectLaura() {

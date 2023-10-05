@@ -21,16 +21,15 @@ class Köttätande extends Växt implements Waterable {
         this.längd = längd;
         this.mängd = mängd;
     }
-
     /* Metoden får in data från main programmet där användaren har angivit vilken växt som ska få mat.
-    Där är data angivet från respektive växts längd & mängd vätska och sedan så kallar vi på
-    waterPlant metoden för att göra uträkningen. Metoden använder Getters från superklassen Växt.
-    */
+           Där är data angivet från respektive växts längd & mängd vätska och sedan så kallar vi på
+           waterPlantUträkning metoden för att göra uträkningen.
+           Metod-överlagring är en form av Polymorphism*/
     @Override
     public double waterPlantUträkning() {
         return BASNIVÅ + (getMängd() * getLängd());
     }
-
+    //Skriver ut namnet av växten och uträkningen till användaren.
     @Override
     public void plantPrint() {
         JOptionPane.showMessageDialog(null,getNamn() + " kommer att få " + waterPlantUträkning()

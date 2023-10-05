@@ -20,15 +20,15 @@ class Kaktus extends Växt implements Waterable {
     }
 
     /* Metoden får in data från main programmet där användaren har angivit vilken växt som ska få mat.
-        Där är data angivet från respektive växts längd & mängd vätska och sedan så kallar vi på
-        waterPlant metoden för att göra uträkningen. Metoden använder Getters från superklassen Växt.
-        */
+         Där är data angivet från respektive växts längd & mängd vätska och sedan så kallar vi på
+         waterPlantUträkning metoden för att göra uträkningen.
+         Metod-överlagring är en form av Polymorphism*/
     @Override
     public double waterPlantUträkning() {
         return getMängd();
 
     }
-
+    //Skriver ut namnet av växten och uträkningen till användaren.
     @Override
     public void plantPrint() {
         JOptionPane.showMessageDialog(null,getNamn() + " kommer att få " + waterPlantUträkning() + " liter utav "
