@@ -4,18 +4,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class KöttätandeTest {
 
-    Köttätande köttätande = new Köttätande("meatloaf", 0.7, 0.2);
-
     //Test för att kolla ifall man får ut korrekt svar när man använder metoden waterPlantUträkning i klassen Köttätande.
 
     @Test
     void isWaterAmountCalculatedCorrectly() {
+        double basNivå = 0.1;
         double mängdVätska = 0.2;
         double längdMeter = 0.7;
-        double expectedOutput = mängdVätska * längdMeter;
+        double expectedOutput = basNivå + mängdVätska * längdMeter;
 
-        Palm laura = new Palm("laura", 0.7, 0.2);
-        double actualOutput = laura.waterPlantUträkning();
+        Köttätande köttätande = new Köttätande("meatloaf", 0.7, 0.2);
+        double actualOutput = köttätande.waterPlantUträkning();
 
 
         assertEquals(expectedOutput, actualOutput);
